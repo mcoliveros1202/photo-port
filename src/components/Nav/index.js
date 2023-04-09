@@ -11,7 +11,7 @@ function Nav(props) {
     useEffect(() => {
         document.title = capitalizeFirstLetter(currentCategory.name);
     }, [currentCategory]);
-    
+
     return (
         <header className='flex-row px-1'>
             <h2>
@@ -31,7 +31,8 @@ function Nav(props) {
                     </li>
                     {categories.map((category) => (
                         <li
-                            className={`mx-1 ${currentCategory.name === category.name && 'navActive'
+                            className={`mx-1 ${
+                                currentCategory.name === category.name && 'navActive'
                                 }`}
                             key={category.name}>
                             <span
