@@ -40,7 +40,8 @@ function Nav(props) {
                             key={category.name}>
                             <span
                                 onClick={() => {
-                                    setCurrentCategory(category)
+                                    setCurrentCategory(category);
+                                    setContactSelected(false);
                                 }}
                             >
                                 {capitalizeFirstLetter(category.name)}
